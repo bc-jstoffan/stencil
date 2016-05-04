@@ -1,1 +1,27 @@
-brand.html
+{{#partial "page"}}
+<div class="page">
+    <main class="page-content">
+        <script src="https://cdn.bcapp.dev/vagrant/bigcommerce/js/microapp_common_minimum-d52e82c6477ec42ab02a0fed31e72b1a78865d64.js"></script>
+        <script src="https://cdn.bcapp.dev/rHEAD/vendor/bower_components/ng-common/dist/js/ng-common.min.js"></script>
+        <script src="https://cdn.bcapp.dev/rHEAD/vendor/bower_components/ng-checkout/dist/js/ng-checkout.min.js"></script>
+
+        <script type="text/javascript">
+            (function() {
+                angular.module('ng-common.bc-app', [])
+                        .constant('BC_APP_CONFIG', {"cdnPath":"https:\/\/cdn.bcapp.dev\/rHEAD","checkout":{"enableOrderComments":1,"enableTermsAndConditions":0,"guestCheckoutEnabled":1,"orderTermsAndConditions":"","orderTermsAndConditionsLink":"","orderTermsAndConditionsType":"","shippingQuoteFailedMessage":"Unfortunately one or more items in your cart can't be shipped to your location. Please choose a different delivery address.","realtimeShippingProviders":["Fedex","UPS","USPS"]},"currency":{"currencyCode":"USD","currencyLocation":"Left","currencySymbol":"$","decimalPlaces":2,"decimalSeparator":".","thousandsSeparator":","},"defaultNewsletterSignup":false,"passwordRequirements":{"alpha":"\/[A-Za-z]\/","numeric":"\/[0-9]\/","minlength":7,"error":"Passwords must be at least 7 characters and contain both alphabetic and numeric characters."},"orderEmail":"info@s123456.bcapp.dev","shopPath":"https:\/\/store-0occ59sn.bcapp.dev","showNewsletterSignup":true,"storeName":"s123456","storePhoneNumber":""})
+                        .constant('BC_SEED_DATA', {"billing-countries":[], "billing-states":[], "shipping-countries":[{"code":"US","name":"United States"}],"shipping-states":{"US":["Alabama","Alaska","American Samoa","Arizona","Arkansas","Armed Forces Africa","Armed Forces Americas","Armed Forces Canada","Armed Forces Europe","Armed Forces Middle East","Armed Forces Pacific","California","Colorado","Connecticut","Delaware","District of Columbia","Federated States Of Micronesia","Florida","Georgia","Guam","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Marshall Islands","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Northern Mariana Islands","Ohio","Oklahoma","Oregon","Palau","Pennsylvania","Puerto Rico","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virgin Islands","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]},"all-countries":[] });
+                })();
+        </script>
+
+        <div class="ng-checkout-container" id="micro-app-ng-checkout" data-ui-view>
+        </div>
+
+        <script type="text/javascript">
+            // Being the last element in the document ensures the rest of the DOM is ready by now
+//            angular.bootstrap(document.getElementById('micro-app-ng-checkout'), ['ng-checkout']);
+        </script>
+    </main>
+</div>
+{{/partial}}
+{{> layout/base}}
+`

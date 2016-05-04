@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
+        <base href="/">
         <title>{{ head.title }}</title>
         {{{ head.meta_tags }}}
         {{{ head.config }}}
         {{#block "head"}} {{/block}}
         <link href="{{ head.favicon }}" rel="shortcut icon">
+        <link href="https://cdn.bcapp.dev/rHEAD/vendor/bower_components/ng-checkout/dist/css/ng-checkout.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         {{{stylesheet '/assets/css/theme.css'}}}
         {{ getFontsCollection }}
